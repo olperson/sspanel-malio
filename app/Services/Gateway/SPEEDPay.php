@@ -69,11 +69,11 @@ class SPEEDPay extends AbstractPayment
             'transport' => $settings['transport'],
             'apiurl' => 'https://cyberpay.me/'
         );
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		$url_notify = 'http://'.$_SERVER['HTTP_HOST'].'/payment/notify/SPEEDPay';
-=======
+//=======
 		$url_notify = 'https://'.$_SERVER['HTTP_HOST'].'/payment/notify/SPEEDPay';
->>>>>>> 898f686 (bug fixed)
+//>>>>>>> 898f686 (bug fixed)
         $url_return = (self::isHTTPS() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'];
 		
         /**************************请求参数**************************/
@@ -132,11 +132,11 @@ class SPEEDPay extends AbstractPayment
                 'apiurl' => $settings['apiurl']
             );
 		if ($_GET['type'] == "alipay") {
-            $type = "SPEEDPay-支付宝";
+            $type = "SPEEDPay-alipay".$pid;
         }elseif($_GET['type'] == "wxpay") {
-            $type = "SPEEDPay-微信";
+            $type = "SPEEDPay-wechatpay".$pid;
         }elseif($_GET['type'] == "qqpay") {
-        	$type = "SPEEDPay-QQ支付";
+        	$type = "SPEEDPay-qqpay".$pid;
         }else{
         	$type = "SPEEDPay";
         }
