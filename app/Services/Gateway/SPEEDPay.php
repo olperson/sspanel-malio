@@ -132,11 +132,11 @@ class SPEEDPay extends AbstractPayment
                 'apiurl' => $settings['apiurl']
             );
 		if ($_GET['type'] == "alipay") {
-            $type = "SPEEDPay-支付宝";
+            $type = "SPEEDPay-alipay".$pid;
         }elseif($_GET['type'] == "wxpay") {
-            $type = "SPEEDPay-微信";
+            $type = "SPEEDPay-wechatpay".$pid;
         }elseif($_GET['type'] == "qqpay") {
-        	$type = "SPEEDPay-QQ支付";
+        	$type = "SPEEDPay-qqpay".$pid;
         }else{
         	$type = "SPEEDPay";
         }
