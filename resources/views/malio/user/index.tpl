@@ -300,8 +300,9 @@
                                             <nav aria-label="breadcrumb">
                                                 <ol class="breadcrumb">
                                                     <li class="breadcrumb-item active"
-                                                        aria-current="page">{$i18n->get('last-used-time')}
-                                                        : {if $user->lastSsTime() == '从未使用喵'}{$i18n->get('never-used')}{else}{substr($user->lastSsTime(), 5)}{/if}</li>
+                                                        aria-current="page">{$i18n->get('online-devices')}
+                                                        <span class="counter">{$user->online_ip_count()}</span> / {if $user->node_connector == 0}∞{else}<span class="counterup">{$user->node_connector}</span>{/if}
+                                                    </li>
                                                 </ol>
                                             </nav>
                                         </div>
