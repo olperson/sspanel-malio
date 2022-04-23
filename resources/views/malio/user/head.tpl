@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="{$malio_config['statics_url']}npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
 
 <!-- Template CSS -->
-<link rel="stylesheet" href="/theme/malio/css/style-{$malio_config['theme_color']}.css">
-<link rel="stylesheet" href="/theme/malio/assets/css/components.css">
+<link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/css/style-{$malio_config['theme_color']}.css">
+<link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/css/components.css">
 
 <!-- Custom CSS -->
-<link rel="stylesheet" href="/theme/malio/css/malio.css">
+<link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/css/malio.css">
 
 {if $malio_config['google_analytics_code'] != ''}
 <!-- Global site tag (gtag.js) - Google Analytics -->

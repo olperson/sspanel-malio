@@ -7,13 +7,13 @@
 
   <title>{$config['appName']}</title>
   <link rel="shortcut icon" href="/">
-  <link rel="stylesheet" href="/theme/malio/index/css/prism.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/css/prism.css">
   <link rel="stylesheet" href="{$malio_config['statics_url']}npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="{$malio_config['statics_url']}npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
-  <link rel="stylesheet" href="/theme/malio/index/css/chocolat.css">
-  <link rel="stylesheet" href="/theme/malio/index/css/style.css">
-  <link rel="stylesheet" href="/theme/malio/index/css/custom.css">
-  <link rel="stylesheet" href="/theme/malio/index/landing/style.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/css/chocolat.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/css/style.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/css/custom.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/landing/style.css">
   <link rel="stylesheet" href="{$malio_config['statics_url']}npm/swiper@4.5.0/dist/css/swiper.min.css">
   <link rel="shortcut icon" href="/favicon.ico"/>
 
@@ -210,7 +210,7 @@
           {/if}
         </div>
         <div class="image d-none d-lg-block">
-          <img src="/theme/malio/index/landing/ill.svg" alt="img">
+          <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/landing/ill.svg" alt="img">
         </div>
       </div>
     </div>
@@ -299,7 +299,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5 d-none d-lg-block">
-          <img src="/theme/malio/index/img/data_center.svg" alt="user flow" class="img-fluid">
+          <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/img/data_center.svg" alt="user flow" class="img-fluid">
         </div>
         <div class="col-lg-7 pl-lg-5 col-md-12">
           <div class="badge badge-primary mb-3" data-i18n="">{$i18n->get('index-section-2-above-title')}</div>
@@ -320,9 +320,9 @@
         </div>
         <div class="col-lg-5 d-none d-lg-block">
           <div class="abs-images">
-            <img src="/theme/malio/index/img/netflix.png" alt="user flow" class="img-fluid rounded dark-shadow">
-            <img src="/theme/malio/index/img/spotify.png" alt="user flow" class="img-fluid rounded dark-shadow">
-            <img src="/theme/malio/index/img/hbo.png" alt="user flow" class="img-fluid rounded dark-shadow">
+            <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/img/netflix.png" alt="user flow" class="img-fluid rounded dark-shadow">
+            <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/img/spotify.png" alt="user flow" class="img-fluid rounded dark-shadow">
+            <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/img/hbo.png" alt="user flow" class="img-fluid rounded dark-shadow">
           </div>
         </div>
       </div>
@@ -333,7 +333,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 d-none d-lg-block">
-          <img src="/theme/malio/index/img/waiting_notifications.svg" alt="user flow" class="img-fluid" style="width:30rem">
+          <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/img/waiting_notifications.svg" alt="user flow" class="img-fluid" style="width:30rem">
         </div>
         <div class="col-lg-4 col-md-12">
           <h2 data-i18n="">{$i18n->get('index-section-4-title')}</h2>
@@ -509,13 +509,13 @@
     </div>
   </footer>
 
-  <script src="/theme/malio/index/js/jquery.min.js"></script>
-  <script src="/theme/malio/index/js/popper.js"></script>
-  <script src="/theme/malio/index/js/tooltip.js"></script>
-  <script src="/theme/malio/index/js/bootstrap.min.js"></script>
-  <script src="/theme/malio/index/js/prism.js"></script>
-  <script src="/theme/malio/index/js/stisla.js"></script>
-  <script src="/theme/malio/index/js/script.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/js/jquery.min.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/js/popper.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/js/tooltip.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/js/bootstrap.min.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/js/prism.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/js/stisla.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/index/js/script.js"></script>
 
 
   <!--End mc_embed_signup-->

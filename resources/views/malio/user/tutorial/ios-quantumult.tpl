@@ -163,7 +163,7 @@
                           </div>
                           <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                             <div class="tutorial-pic hide-on-mobie">
-                              <img style="border:1px solid #f0f0f0" src="/theme/malio/img/tutorial/ios-quantumult-1.png">
+                              <img style="border:1px solid #f0f0f0" src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/tutorial/ios-quantumult-1.png">
                             </div>
                           </div>
                         </div>
@@ -186,7 +186,7 @@
                           </div>
                           <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                             <div class="tutorial-pic">
-                              <img src="/theme/malio/img/tutorial/ios-quantumult-2.png">
+                              <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/tutorial/ios-quantumult-2.png">
                             </div>
                           </div>
                         </div>
@@ -200,7 +200,7 @@
                           </div>
                           <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                             <div class="tutorial-pic">
-                              <img style="border:1px solid #f0f0f0" src="/theme/malio/img/tutorial/ios-quantumult-3.png">
+                              <img style="border:1px solid #f0f0f0" src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/tutorial/ios-quantumult-3.png">
                             </div>
                           </div>
                         </div>

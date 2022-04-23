@@ -641,7 +641,7 @@
 
 <!-- Counter Up  -->
 <script src="{$malio_config['statics_url']}npm/waypoints@4.0.0/lib/jquery.waypoints.min.js"></script>
-<script src="/theme/malio/js/jquery.counterup.min.js"></script>
+<script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/js/jquery.counterup.min.js"></script>
 
 <script src="{$malio_config['statics_url']}npm/bowser@1.9.4/bowser.min.js"></script>
 

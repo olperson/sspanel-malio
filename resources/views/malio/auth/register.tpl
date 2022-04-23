@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="{$malio_config['statics_url']}npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="/theme/malio/assets/css/style.css">
-  <link rel="stylesheet" href="/theme/malio/assets/css/components.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/css/style.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/css/components.css">
 
   {if $malio_config['enable_crisp'] == true && $malio_config['enable_crisp_outside'] == true}
   {include file='crisp.tpl'}
@@ -29,7 +29,7 @@
         <div class="row">
           <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
             <div class="login-brand">
-              <img src="/theme/malio/assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+              <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
             </div>
 
             <div class="card card-primary">
@@ -271,12 +271,12 @@
   <script src="{$malio_config['statics_url']}npm/moment@2.18.1/min/moment.min.js"></script>
 
   <!-- JS Libraies -->
-  <script src="/theme/malio/assets/modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
   <script src="{$malio_config['statics_url']}npm/sweetalert2@7.25.6/dist/sweetalert2.all.min.js"></script>
   <script src="{$malio_config['statics_url']}npm/clipboard@2/dist/clipboard.min.js"></script>
 
   <!-- Page Specific JS File -->
-    <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
+    <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}npm/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
 
   <script>
     var code = "UG93ZXJlZCBieSA8YSBocmVmPSIvc3RhZmYiPlNTUEFORUw8L2E+IDxkaXYgY2xhc3M9ImJ1bGxldCI+PC9kaXY+VGhlbWUgYnkgPGEgaHJlZj0iaHR0cHM6Ly90Lm1lL2VkaXRYWSIgdGFyZ2V0PSJibGFuayI+ZWRpdFhZPC9hPg==";

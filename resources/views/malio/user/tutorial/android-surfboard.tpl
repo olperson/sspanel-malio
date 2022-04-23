@@ -162,7 +162,7 @@
                           </div>
                           <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                             <div class="tutorial-pic hide-on-mobie">
-                              <img style="border:1px solid #f0f0f0" src="/theme/malio/img/tutorial/android-surfboard-1.png">
+                              <img style="border:1px solid #f0f0f0" src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/tutorial/android-surfboard-1.png">
                             </div>
                           </div>
                         </div>
@@ -181,7 +181,7 @@
                           </div>
                           <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                             <div class="tutorial-pic">
-                              <img src="/theme/malio/img/tutorial/blank-red.jpg">
+                              <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/tutorial/blank-red.jpg">
                             </div>
                           </div>
                         </div>
@@ -195,7 +195,7 @@
                           </div>
                           <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                             <div class="tutorial-pic">
-                              <img style="border:1px solid #f0f0f0" src="/theme/malio/img/tutorial/android-surfboard-3.png">
+                              <img style="border:1px solid #f0f0f0" src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/tutorial/android-surfboard-3.png">
                             </div>
                           </div>
                         </div>

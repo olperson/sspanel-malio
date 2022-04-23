@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="{$malio_config['statics_url']}npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="/theme/malio/css/style-{$malio_config['theme_color']}.css">
-  <link rel="stylesheet" href="/theme/malio/assets/css/components.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/css/style-{$malio_config['theme_color']}.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/css/components.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/theme/malio/css/malio.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/css/malio.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@
   <script src="{$malio_config['statics_url']}npm/clipboard@2/dist/clipboard.min.js"></script>
   <script src="{$malio_config['statics_url']}npm/bowser@1.9.4/bowser.min.js"></script>
 
-    <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
+    <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}npm/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
 
   <script src="{$malio_config['statics_url']}npm/kjua@0.1.2/dist/kjua.min.js"></script>
 

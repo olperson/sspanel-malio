@@ -7,7 +7,7 @@
   <title>{$i18n->get('edit-rule')} &mdash; {$config["appName"]}</title>
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="/theme/malio/assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/modules/summernote/summernote-bs4.css">
 
 </head>
 

@@ -13,8 +13,8 @@
   <!-- CSS Libraries -->
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="/theme/malio/assets/css/style.css">
-  <link rel="stylesheet" href="/theme/malio/assets/css/components.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/css/style.css">
+  <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/css/components.css">
 </head>
 
 <body>
@@ -49,12 +49,12 @@
   <script src="{$malio_config['statics_url']}npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
   <script src="{$malio_config['statics_url']}npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js"></script>
   <script src="{$malio_config['statics_url']}npm/moment@2.18.1/min/moment.min.js"></script>
-  <script src="/theme/malio/assets/js/stisla.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/js/stisla.js"></script>
 
   <!-- JS Libraies -->
 
   <!-- Template JS File -->
-  <script src="/theme/malio/assets/js/scripts.js"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/js/scripts.js"></script>
 
   <script>
     var code = "UG93ZXJlZCBieSA8YSBocmVmPSIvc3RhZmYiPlNTUEFORUw8L2E+IDxkaXYgY2xhc3M9ImJ1bGxldCI+PC9kaXY+VGhlbWUgYnkgPGEgaHJlZj0iaHR0cHM6Ly90Lm1lL2VkaXRYWSIgdGFyZ2V0PSJibGFuayI+ZWRpdFhZPC9hPg==";

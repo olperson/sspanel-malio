@@ -39,7 +39,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="empty-state">
-                      <img class="img-fluid" src="/theme/malio/img/card_payment_online_1.svg" style="height: 350px" alt="image">
+                      <img class="img-fluid" src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/card_payment_online_1.svg" style="height: 350px" alt="image">
                       {if $success == 1}
                       <h2 class="mt-4">支付结果已确认</h2>
                       <p class="lead">
