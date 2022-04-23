@@ -56,7 +56,7 @@
     }
 </script>
 
-<script src="/theme/malio/js/malio.js?{$malio_config['malio_js_version']}"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
 
 <script>
     var isWeixin = function () {
