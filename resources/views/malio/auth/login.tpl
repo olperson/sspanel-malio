@@ -245,7 +245,7 @@
 
   <!-- Page Specific JS File -->
 
-  <script src="{if {$malio_config['malio_js_url']} == ''}theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
+  <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
 
   <script>
   var code = "UG93ZXJlZCBieSA8YSBocmVmPSIvc3RhZmYiPlNTUEFORUw8L2E+IDxkaXYgY2xhc3M9ImJ1bGxldCI+PC9kaXY+VGhlbWUgYnkgPGEgaHJlZj0iaHR0cHM6Ly90Lm1lL2VkaXRYWSIgdGFyZ2V0PSJibGFuayI+ZWRpdFhZPC9hPg==";

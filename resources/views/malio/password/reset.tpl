@@ -76,7 +76,7 @@
 
   <!-- Page Specific JS File -->
   <script src="{$malio_config['statics_url']}npm/sweetalert2@7.25.6/dist/sweetalert2.all.min.js"></script>
-    <script src="{if {$malio_config['malio_js_url']} == ''}theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
+    <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
   <script>
     function reset() {
       $("#reset").attr('disabled', 'disabled');

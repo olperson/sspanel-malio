@@ -62,7 +62,7 @@
   <script src="{$malio_config['statics_url']}npm/clipboard@2/dist/clipboard.min.js"></script>
   <script src="{$malio_config['statics_url']}npm/bowser@1.9.4/bowser.min.js"></script>
 
-    <script src="{if {$malio_config['malio_js_url']} == ''}theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
+    <script src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/js/malio.js{else}{$malio_config['malio_js_url']}theme/malio/js/malio.js{/if}?{$malio_config['malio_js_version']}"></script>
 
   <script src="{$malio_config['statics_url']}npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
