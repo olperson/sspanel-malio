@@ -7,8 +7,8 @@
   <title>500 &mdash; {$config["appName"]}</title>
 
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="{$malio_config['statics_url']}npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{$malio_config['statics_url']}npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
 
   <!-- CSS Libraries -->
 
@@ -43,12 +43,12 @@
   </div>
 
   <!-- General JS Scripts -->
-  <script src="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/tooltip.js@1.3.2/dist/umd/tooltip.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
+  <script src="{$malio_config['statics_url']}npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="{$malio_config['statics_url']}npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+  <script src="{$malio_config['statics_url']}npm/tooltip.js@1.3.2/dist/umd/tooltip.min.js"></script>
+  <script src="{$malio_config['statics_url']}npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="{$malio_config['statics_url']}npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="{$malio_config['statics_url']}npm/moment@2.18.1/min/moment.min.js"></script>
   <script src="/theme/malio/assets/js/stisla.js"></script>
 
   <!-- JS Libraies -->

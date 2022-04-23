@@ -21,7 +21,7 @@
         (function () {
             function perfops() {
                 var js = document.createElement('script');
-                js.src = 'https://fastly.jsdelivr.net/npm/perfops-rom';
+                js.src = '{$malio_config['statics_url']}npm/perfops-rom';
                 document.body.appendChild(js);
             }
 
@@ -35,9 +35,9 @@
     <script async src="https://www.google-analytics.com/analytics.js"></script>
     <!-- End Google Analytics -->
 {/if}
-<script src="https://fastly.jsdelivr.net/npm/jquery-validation@1.17.0"></script>
-<script src="https://fastly.jsdelivr.net/npm/datatables.net@1.10.19"></script>
-<script src="//fastly.jsdelivr.net/gh/DataTables/DataTables@1.10.19/media/js/dataTables.material.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/datatables.net@1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="{$malio_config['statics_url']}gh/DataTables/DataTables@1.10.19/media/js/dataTables.material.min.js"></script>
 <script src="/theme/material/js/base.min.js"></script>
 <script src="/theme/material/js/project.min.js"></script>
 

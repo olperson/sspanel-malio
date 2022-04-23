@@ -1,5 +1,5 @@
 {include file='admin/main.tpl'}
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/editor.md@1.5.0/css/editormd.min.css"/>
+<link rel="stylesheet" href="{$malio_config['statics_url']}npm/editor.md@1.5.0/css/editormd.min.css"/>
 
 <main class="content">
     <div class="content-header ui-content-header">
@@ -106,7 +106,7 @@
 
 {include file='admin/footer.tpl'}
 
-<script src="https://fastly.jsdelivr.net/npm/editor.md@1.5.0/editormd.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/editor.md@1.5.0/editormd.min.js"></script>
 <script>
     function changetouser_modal_show() {
         $("#changetouser_modal").modal();
@@ -221,7 +221,7 @@
 
     (() => {
         editor = editormd("editormd", {
-            path: "https://fastly.jsdelivr.net/npm/editor.md@1.5.0/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
+            path: "{$malio_config['statics_url']}npm/editor.md@1.5.0/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
             height: 450,
             saveHTMLToTextarea: true,
             emoji: true

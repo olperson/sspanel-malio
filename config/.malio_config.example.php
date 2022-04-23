@@ -28,6 +28,7 @@ $Malio_Config['small_brand'] = 'ML';    // 侧边栏在缩小状态下显示的 
 
 
 ####### 面板设置 #######
+$Malio_Config['statics_url'] = 'https://fastly.jsdelivr.net/'; //静态CDN界面"/"是必要的
 $Malio_Config['enable_webapi_ip_verification'] = false;    // (此项已废弃，可使用.config.php里面的checkNodeIp) 当节点通过 webapi 连接时，不验证节点IP是否与数据库中的IP相同。关闭此选项会降低安全性。设置为 true 为开启 IP 验证
 $Malio_Config['enable_webapi_email_hash'] = true;    // 启用后，当节点通过 webapi 连接时，传出去的邮件地址会经过md5加密。
 $Malio_Config['reset_bandwidth_and_expire_date_when_change_class'] = false;    // 设置为true时，当用户购买与用户当前等级不同的套餐时，重置流量和过期时间。（定制功能）

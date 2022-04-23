@@ -73,7 +73,7 @@
                     <h1>{$i18n->get('apps-and-tutorial')}</h1>
                 </div>
                 <div class="alert alert-success">
-                    下方為簡易版教程，<a href={$malio_config['docs_url']} target="_blank">跳轉進階教程</a>
+                    下方為簡易版教程，<a href="{$malio_config['docs_url']}" target="_blank">跳轉進階教程</a>
                 </div>
                 <div class="section-body">
                     <div class="row mt-sm-4">

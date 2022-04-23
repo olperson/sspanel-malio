@@ -221,7 +221,7 @@
   </div>
 
   {include file='user/scripts.tpl'}
-  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="{$malio_config['statics_url']}npm/kjua@0.1.2/dist/kjua.min.js"></script>
   <script>
   createQRCode('kitsunebi-download-qrcode', 'https://apps.apple.com/us/app/kitsunebi-proxy-utility/id1446584073','扫描二维码下载客户端')
   </script>

@@ -2,8 +2,8 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
 
 <!-- General CSS Files -->
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
+<link rel="stylesheet" href="{$malio_config['statics_url']}npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="{$malio_config['statics_url']}npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
 
 <!-- Template CSS -->
 <link rel="stylesheet" href="/theme/malio/css/style-{$malio_config['theme_color']}.css">
@@ -37,7 +37,7 @@
     (function () {
         function perfops() {
             var js = document.createElement('script');
-            js.src = 'https://fastly.jsdelivr.net/npm/perfops-rom';
+            js.src = '{$malio_config['statics_url']}npm/perfops-rom';
             document.body.appendChild(js);
         }
         if (document.readyState === 'complete') {

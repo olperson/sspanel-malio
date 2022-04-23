@@ -7,7 +7,7 @@
     <title>{$i18n->get('dashboard')} &mdash; {$config["appName"]}</title>
 
     <!-- C3 chart css -->
-    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/c3@0.6.8/c3.min.css">
+    <link rel="stylesheet" href="{$malio_config['statics_url']}npm/c3@0.6.8/c3.min.css">
 
     <style>
         .card-header i {
@@ -640,14 +640,14 @@
 {include file='user/scripts.tpl'}
 
 <!-- Counter Up  -->
-<script src="https://fastly.jsdelivr.net/npm/waypoints@4.0.0/lib/jquery.waypoints.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/waypoints@4.0.0/lib/jquery.waypoints.min.js"></script>
 <script src="/theme/malio/js/jquery.counterup.min.js"></script>
 
-<script src="https://fastly.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/bowser@1.9.4/bowser.min.js"></script>
 
 <!-- C3 Chart -->
-<script src="https://fastly.jsdelivr.net/npm/d3@3.5.0/d3.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/c3@0.4.10/c3.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/d3@3.5.0/d3.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/c3@0.4.10/c3.min.js"></script>
 
 <script>
     trafficDountChat(

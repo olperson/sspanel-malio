@@ -232,7 +232,7 @@
     }
 </script>
 {include file='user/scripts.tpl'}
-<script src="//fastly.jsdelivr.net/npm/jquery-qrcode2@1.0.0/dist/jquery-qrcode.min.js"></script>
+<script src="{$malio_config['statics_url']}npm/jquery-qrcode2@1.0.0/dist/jquery-qrcode.min.js"></script>
 </body>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="change-password-modal">
