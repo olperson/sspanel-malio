@@ -17,11 +17,11 @@
   <style>
     @font-face {
       font-family: 'malio';
-      src: url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.eot?k8g547{/if}');
-      src: url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.eot?k8g547#iefix{/if}') format('embedded-opentype'),
-      url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.ttf?k8g547{/if}') format('truetype'),
-      url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.woff?k8g547{/if}') format('woff'),
-      url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.svg?k8g547#malio-icons{/if}') format('svg');
+      src: url('{if {$malio_config['malio_js_url']} == ''}/theme{else}{$malio_config['malio_js_url']}npm{/if}/malio/fonts/malio-icons.eot?k8g547');
+      src: url('{if {$malio_config['malio_js_url']} == ''}/theme{else}{$malio_config['malio_js_url']}npm{/if}/malio/fonts/malio-icons.eot?k8g547#iefix') format('embedded-opentype'),
+      url('{if {$malio_config['malio_js_url']} == ''}/theme{else}{$malio_config['malio_js_url']}npm{/if}/malio/fonts/malio-icons.ttf?k8g547') format('truetype'),
+      url('{if {$malio_config['malio_js_url']} == ''}/theme{else}{$malio_config['malio_js_url']}npm{/if}/malio/fonts/malio-icons.woff?k8g547') format('woff'),
+      url('{if {$malio_config['malio_js_url']} == ''}/theme{else}{$malio_config['malio_js_url']}npm{/if}/malio/fonts/malio-icons.svg?k8g547#malio-icons') format('svg');
       font-weight: normal;
       font-style: normal;
     }
