@@ -14,6 +14,18 @@
 <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/css/components.css">
 
 <!-- Custom CSS -->
+  <style>
+    @font-face {
+      font-family: 'malio';
+      src: url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.eot?k8g547{/if}');
+      src: url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.eot?k8g547#iefix{/if}') format('embedded-opentype'),
+      url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.ttf?k8g547{/if}') format('truetype'),
+      url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.woff?k8g547{/if}') format('woff'),
+      url('{if {$malio_config['malio_js_url']} == ''}}/{else}{$malio_config['malio_js_url']}npm/malio/fonts/malio-icons.svg?k8g547#malio-icons{/if}') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 <link rel="stylesheet" href="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/css/malio.css">
 
 {if $malio_config['google_analytics_code'] != ''}

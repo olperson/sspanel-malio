@@ -45,16 +45,7 @@
   border-color: #6777ef;
 }
 
-@font-face {
-    font-family: 'malio';
-    src:  url('{$malio_config['malio_js_url']}/theme/malio/fonts/malio-icons.eot?k8g547');
-    src:  url('{$malio_config['malio_js_url']}/theme/malio/fonts/malio-icons.eot?k8g547#iefix') format('embedded-opentype'),
-      url('{$malio_config['malio_js_url']}/theme/malio/fonts/malio-icons.ttf?k8g547') format('truetype'),
-      url('{$malio_config['malio_js_url']}/theme/malio/fonts/malio-icons.woff?k8g547') format('woff'),
-      url('{$malio_config['malio_js_url']}/theme/malio/fonts/malio-icons.svg?k8g547#malio-icons') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
+
   
   [class^="malio-"], [class*=" malio-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
