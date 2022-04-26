@@ -510,41 +510,96 @@ class AppsProfiles
             '123456' => [
                 'Checks' => [],
                 'ProxyGroup' => [
-                    [
-                        'name' => 'Proxy',
+					[
+                        'name' => '🚀 节点选择',
                         'type' => 'select',
                         'content' => [
-                            'regex' => '(.*)'
+                            'regex' => '(.*)',
                         ]
                     ],
-                    [
-                        'name' => 'Domestic',
-                        'type' => 'select',
-                        'content' => [
-                            'left-proxies' => ['DIRECT', 'Proxy']
-                        ]
-                    ],
-                    [
-                        'name' => 'AsianTV',
-                        'type' => 'select',
-                        'content' => [
-                            'left-proxies' => ['Domestic', 'Proxy']
-                        ]
-                    ],
-                    [
-                        'name' => 'GlobalTV',
-                        'type' => 'select',
-                        'content' => [
-                            'left-proxies' => ['Proxy']
-                        ]
-                    ],
-                    [
-                        'name' => 'Others',
-                        'type' => 'select',
-                        'content' => [
-                            'left-proxies' => ['Proxy', 'Domestic']
-                        ]
-                    ]
+	                [
+		                'name' => '♻️ 自动选择',
+		                'type' => 'url-test',
+		                'content' => [
+			                'regex' => '(.*)'
+		                ],
+		                'url' => 'http://www.qualcomm.cn/generate_204',
+		                'interval' => 3600
+	                ],
+	                [
+		                'name' => '🎯 全球直连',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => ['DIRECT','♻️ 自动选择', '🚀 节点选择']
+		                ]
+	                ],
+	                [
+		                'name' => '🌍 国外媒体',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => ['♻️ 自动选择', '🚀 节点选择','🎯 全球直连']
+		                ]
+	                ],
+	                [
+		                'name' => '📲 电报信息',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => ['♻️ 自动选择', '🚀 节点选择','🎯 全球直连']
+		                ]
+	                ],
+	                [
+		                'name' => 'Ⓜ️ 微软服务',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => [ '🚀 节点选择','🎯 全球直连']
+		                ]
+	                ],
+	                [
+		                'name' => '🍎 苹果服务',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => [ '🚀 节点选择','🎯 全球直连']
+		                ]
+	                ],
+	                [
+		                'name' => '📢 谷歌FCM',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => ['♻️ 自动选择', '🚀 节点选择','🎯 全球直连']
+		                ]
+	                ],
+	                [
+		                'name' => '🛑 全球拦截',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => ['REJECT', 'DIRECT']
+		                ]
+	                ],
+	                [
+		                'name' => '🍃 应用净化',
+		                'type' => 'select',
+		                'content' => [
+			                'left-proxies' => ['REJECT', 'DIRECT']
+		                ]
+	                ],
+	                [
+		                'name' => '🐟 漏网之鱼',
+		                'type' => 'select',
+		                'content' => [
+			                'regex' => '(.*)',
+			                'left-proxies' => ['♻️ 自动选择', '🚀 节点选择']
+		                ]
+	                ],
+	
+	
+
                 ]
             ]
         ];
