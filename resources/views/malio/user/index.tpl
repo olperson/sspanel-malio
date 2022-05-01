@@ -19,9 +19,6 @@
             flex-basis: 0;
         }
 
-        .wizard-step-active {
-            cursor: pointer;
-        }
 
         .btn-quantumult {
             background: linear-gradient(to right, black, black) !important;
@@ -113,6 +110,18 @@
             margin-bottom: 16px;
         }
 
+        .wizard-step-active {
+            cursor: pointer;
+        }
+
+        .wizard-step-info {
+            cursor: pointer;
+        }
+
+        .wizard-step-warning {
+            cursor: pointer;
+        }
+
         .wizard-steps .wizard-step .wizard-step-label {
             text-transform: none;
         }
@@ -172,9 +181,10 @@
                         </div>
                     {/if}
                     {if $malio_config['code-off'] != ''}
-                    <div class="alert alert-primary">
-                        <a class="alert-link" style="font-weight:400">{$i18n->get('code-off-guide-alert')}{$malio_config['code-off']}</a>
-                    </div>
+                        <div class="alert alert-primary">
+                            <a class="alert-link"
+                               style="font-weight:400">{$i18n->get('code-off-guide-alert')}{$malio_config['code-off']}</a>
+                        </div>
                     {/if}
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12">
@@ -293,7 +303,7 @@
                                         {if $reset_time!=='Na' && $reset_time==0 }
                                             <span class="counterup">{$i18n->get('is-reset-day')}</span>
                                         {/if}
-                                           {if $reset_time==='Na'}
+                                        {if $reset_time==='Na'}
                                             <span class="counterup"> {$i18n->get('not-activated-reset')}</span>
                                         {/if}
                                     </div>
@@ -303,7 +313,9 @@
                                                 <ol class="breadcrumb">
                                                     <li class="breadcrumb-item active"
                                                         aria-current="page">{$i18n->get('online-devices')}
-                                                        <span class="counter">{$user->online_ip_count()}</span> / {if $user->node_connector == 0}∞{else}<span class="counterup">{$user->node_connector}</span>{/if}
+                                                        <span class="counter">{$user->online_ip_count()}</span>
+                                                        / {if $user->node_connector == 0}∞{else}<span
+                                                                class="counterup">{$user->node_connector}</span>{/if}
                                                     </li>
                                                 </ol>
                                             </nav>
@@ -590,13 +602,22 @@
                                                         {$i18n->get('new-user-guide-setp-1')}
                                                     </div>
                                                 </div>
-                                                <div class="wizard-step wizard-step-active"
+                                                <div class="wizard-step wizard-step-info"
+                                                     onclick="location='/user/code'">
+                                                    <div class="wizard-step-icon">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </div>
+                                                    <div class="wizard-step-label">
+                                                        {$i18n->get('new-user-guide-setp-2')}
+                                                    </div>
+                                                </div>
+                                                <div class="wizard-step wizard-step-warning"
                                                      onclick="location='/user/tutorial'">
                                                     <div class="wizard-step-icon">
                                                         <i class="fas fa-download"></i>
                                                     </div>
                                                     <div class="wizard-step-label">
-                                                        {$i18n->get('new-user-guide-setp-2')}
+                                                        {$i18n->get('new-user-guide-setp-3')}
                                                     </div>
                                                 </div>
                                                 <div class="wizard-step wizard-step-success">
@@ -604,7 +625,7 @@
                                                         <i class="fas fa-grin-squint"></i>
                                                     </div>
                                                     <div class="wizard-step-label">
-                                                        {$i18n->get('new-user-guide-setp-3')}
+                                                        {$i18n->get('new-user-guide-setp-4')}
                                                     </div>
                                                 </div>
                                             </div>

@@ -181,7 +181,9 @@
                             {$i18n->get('store-sub-title')}
                         </div>
 
+
                         <div class="row">
+
                             {if $malio_config['shop_enable_trail_plan'] == true && $user->class < 0}
                                 {$plan = $I18N['trial_plan'][$i18n->lang]}
                                 <div class="col-12 col-md-3 col-lg-3">
@@ -456,6 +458,11 @@
                     <div class="section-body">
 
                         <h2 class="section-title">{$i18n->get('store-title')}</h2>
+                        {if $malio_config['code-off'] != ''}
+                            <div class="alert alert-primary">
+                                <a class="alert-link" style="font-weight:400">{$i18n->get('code-off-guide-alert')}{$malio_config['code-off']}</a>
+                            </div>
+                        {/if}
                         <div class="alert alert-info">
                             {$i18n->get('store-sub-title')}
                         </div>

@@ -1121,13 +1121,17 @@ $I18N['new-user-guide-lead'] = array(
 );
 $I18N['new-user-guide-setp-1'] = array(
 	'en' => 'Subscribe to your perfect plan or have a free trial at the store',
-	'zh-cn' => '前往商店購買會員訂閱計劃或免費試用'
+	'zh-cn' => '前往訂閲商店挑選訂閱計劃或免費試用'
 );
 $I18N['new-user-guide-setp-2'] = array(
+	'en' => 'Calculate the corresponding price and go to the wallet interface to recharge',
+	'zh-cn' => '計算對應價格並前往錢包界面充值'
+);
+$I18N['new-user-guide-setp-3'] = array(
 	'en' => 'Follow the steps in tutorials to setup your devices',
 	'zh-cn' => '下載客戶端並按照教程安裝'
 );
-$I18N['new-user-guide-setp-3'] = array(
+$I18N['new-user-guide-setp-4'] = array(
 	'en' => 'Enjoy our fast and reliable service',
 	'zh-cn' => '開開心心看世界'
 );
@@ -1143,7 +1147,7 @@ $I18N['important-announcement'] = array(
 ## Store 商店 ##
 $I18N['store'] = array(
 	'en' => 'Store',
-	'zh-cn' => '購買訂閱'
+	'zh-cn' => '訂閲商店'
 );
 $I18N['purchase-data-add-on'] = array(
 	'en' => 'Purchase Data Add-on',
