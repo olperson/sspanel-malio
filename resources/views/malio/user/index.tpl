@@ -170,9 +170,11 @@
                             <a href="/user/tutorial" class="alert-link"
                                style="font-weight:400">{$i18n->get('new-user-guide-alert')}</a>
                         </div>
-                        <div class="alert alert-primary">
-                            <a class="alert-link" style="font-weight:400">{$i18n->get('code-off-guide-alert')}</a>
-                        </div>
+                    {/if}
+                    {if $malio_config['code-off'] != ''}
+                    <div class="alert alert-primary">
+                        <a class="alert-link" style="font-weight:400">{$i18n->get('code-off-guide-alert')}{$malio_config['code-off']}</a>
+                    </div>
                     {/if}
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12">

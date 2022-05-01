@@ -940,8 +940,8 @@ $I18N['new-user-guide-alert'] = array(
 	'zh-cn' => '新手上路？<b>點我下載客戶端</b>，輕松上手！'
 );
 $I18N['code-off-guide-alert'] = array(
-	'en' => '',
-	'zh-cn' => '暫無優惠活動'
+	'en' => 'Off code:',
+	'zh-cn' => '促銷優惠碼：'
 );
 $I18N['node-guide-alert'] = array(
 	'en' => '',
