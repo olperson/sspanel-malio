@@ -417,15 +417,15 @@ $I18N['alipay_2'] = array(
 );
 $I18N['wechat-pay'] = array(
 	'en' => 'Wechat Pay',
-	'zh-cn' => '微信支付'
+	'zh-cn' => '微信'
 );
 $I18N['wechat-pay_1'] = array(
 	'en' => 'Wechat Pay',
-	'zh-cn' => '微信支付_1'
+	'zh-cn' => '微信_1'
 );
 $I18N['wechat-pay_2'] = array(
 	'en' => 'Wechat Pay',
-	'zh-cn' => '微信支付_2'
+	'zh-cn' => '微信_2'
 );
 $I18N['cryptocurrency'] = array(
 	'en' => 'Cryptocurrency',

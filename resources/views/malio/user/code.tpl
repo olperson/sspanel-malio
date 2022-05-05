@@ -323,9 +323,9 @@
                                                                 {/if}
                                                             </label>
                                                         {/if}
-                                                    </div>
+
                                                     {*                                                    微信支付*}
-                                                    <div>
+
                                                         {if $malio_config['mups_wechat_0'] != 'none' && $malio_config['mups_wechat_0'] != ''}
                                                             <label class="selectgroup-item">
                                                                 <input type="radio" name="payment" value="wechat_0"
