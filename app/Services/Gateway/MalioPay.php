@@ -505,7 +505,7 @@ class MalioPay extends AbstractPayment
 				if (!$paytaro->verify($request->getParams(), $request->getParam('sign'))) {
 					die('FAIL');
 				}
-				$done = $this->postPayment($request->getParam('out_trade_no'), 'PayTaro');
+				$done = $this->postPayment($request->getParam('out_trade_no'), 'PayTaro-'.$request->getParam('out_trade_no'));
 				die('SUCCESS');
 			case ('epusdt'):
 				$epusdt = new EpUsdt(Config::get('epusdt_token'));
@@ -516,8 +516,7 @@ class MalioPay extends AbstractPayment
 				} else {
 					//合法的数据
 					//业务处理
-					file_put_contents(BASE_PATH . '/storage/epusdt.log',$data."\r\n" , FILE_APPEND);
-					$this->postPayment($request->getParam('order_id'), 'epusdt');
+					$this->postPayment($request->getParam('order_id'), 'EpUSDT-'.$request->getParam('order_id'));
 					die('ok');
 				}
 			case ('SPEEDPay'):

@@ -36,7 +36,7 @@ class EpUsdt extends AbstractPayment
 			}
 		}
 		$sign = md5($sign . $signKey);//密码追加进入开始MD5签名
-		file_put_contents(BASE_PATH . '/storage/epusdt.log',$sign."\r\n" , FILE_APPEND);
+//		file_put_contents(BASE_PATH . '/storage/epusdt.log',$sign."\r\n" , FILE_APPEND);
 		return $sign;
 	}
 	
