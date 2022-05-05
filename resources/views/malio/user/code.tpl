@@ -313,8 +313,14 @@
                                                             <label class="selectgroup-item">
                                                                 <input type="radio" name="payment" value="alipay_2"
                                                                        class="selectgroup-input alipay">
-                                                                <span class="selectgroup-button selectgroup-button-icon"><i
-                                                                            class="fab fa-alipay mr-1"></i>{$i18n->get('alipay_2')}</span>
+                                                                <span class="selectgroup-button selectgroup-button-icon">
+                                                                    {if $malio_config['mups_alipay_2'] == 'epusdt'}
+                                                                    <i
+                                                                            class="fas fa-dollar-sign mr-1"></i>USDT</span>
+                                                                {else}
+                                                                <i
+                                                                        class="fab fa-alipay mr-1"></i>{$i18n->get('alipay_2')}</span>
+                                                                {/if}
                                                             </label>
                                                         {/if}
                                                     </div>

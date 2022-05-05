@@ -153,6 +153,23 @@ class MalioPay extends AbstractPayment
 						);
 					}
 					return json_encode($return);
+				case ('epusdt'):
+					$epusdt = new EpUsdt(Config::get('epusdt_token'));
+					$result = $epusdt->Maliopay($type, $price);
+					if ($result['errcode'] === 0) {
+						$return = array(
+							'ret' => 1,
+							'type' => 'url',
+							'tradeno' => $result['pid'],
+							'url' => $result['url']
+						);
+					} else {
+						$return = array(
+							'ret' => 0,
+							'msg' => '123123'
+						);
+					}
+					return json_encode($return);
 				case ('SPEEDPay'):
 					$SPEEDPay = new SPEEDPay();
 					$result = json_decode($SPEEDPay->purchase($request, $response, $args),true);
@@ -490,7 +507,19 @@ class MalioPay extends AbstractPayment
 				}
 				$done = $this->postPayment($request->getParam('out_trade_no'), 'PayTaro');
 				die('SUCCESS');
-				return;
+			case ('epusdt'):
+				$epusdt = new EpUsdt(Config::get('epusdt_token'));
+				$data = $request->getParams();
+				$signature = $epusdt->sign($data, Config::get('epusdt_token'));
+				if ($data['signature'] != $signature) { //不合法的数据
+					return 'fail';  //返回失败 继续补单
+				} else {
+					//合法的数据
+					//业务处理
+					file_put_contents(BASE_PATH . '/storage/epusdt.log',$data."\r\n" , FILE_APPEND);
+					$this->postPayment($request->getParam('order_id'), 'epusdt');
+					die('ok');
+				}
 			case ('SPEEDPay'):
 				$order_data = $_REQUEST;
 				$pid = $order_data['out_trade_no'];     //订单号
