@@ -337,33 +337,24 @@
                                 </div>
                             </div>
 
-                            {*                            <div class="card">*}
-                            {*                                <div class="card-header">*}
-                            {*                                    <h4><i class="fas fa-chart-bar"*}
-                            {*                                           style="vertical-align: -1px;"></i> {$i18n->get('data-usage-72-hours')}</h4>*}
-                            {*                                    <div class="card-header-action" id="loadTrafficChart-div">*}
-                            {*                                        <a href="##" onclick="loadTrafficChart()" class="btn btn-primary"*}
-                            {*                                           style="display: inline-block">*}
-                            {*                                            {$i18n->get('load-data')}*}
-                            {*                                        </a>*}
-                            {*                                    </div>*}
-                            {*                                </div>*}
-                            {*                                <div id="chartCardbox" class="card-body">*}
-                            {*                                    <div id="scatter-plot"></div>*}
-                            {*                                </div>*}
-                            {*                            </div>*}
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4><i class="fas fa-chart-bar"
+                                           style="vertical-align: -1px;"></i> {$i18n->get('data-usage-72-hours')}</h4>
+                                    <div class="card-header-action" id="loadTrafficChart-div">
+                                        <a href="##" onclick="loadTrafficChart()" class="btn btn-primary"
+                                           style="display: inline-block">
+                                            {$i18n->get('load-data')}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="chartCardbox" class="card-body">
+                                    <div id="scatter-plot"></div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-12 col-md-5 col-lg-5">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4><i class="fas fa-chart-pie"></i> {$i18n->get('data-useage')}</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div id="pie-chart"></div>
-                                </div>
-                            </div>
-
                             {if $malio_config['enable_share'] == true}
                                 <div class="card">
                                     <div class="card-header">
@@ -404,7 +395,6 @@
                                     </div>
                                 </div>
                             {/if}
-
                             {if $malio_config['enable_index_subinfo'] == true}
                                 <div class="card">
                                     <div class="card-header">
@@ -573,7 +563,14 @@
                                     </div>
                                 </div>
                             {/if}
-
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4><i class="fas fa-chart-pie"></i> {$i18n->get('data-useage')}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div id="pie-chart"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
