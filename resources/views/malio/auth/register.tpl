@@ -29,7 +29,7 @@
         <div class="row">
           <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
             <div class="login-brand">
-              <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/assets/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle">
+                          <img src="{if {$malio_config['malio_js_url']} == ''}/theme/malio/npm/malio/assets/img/stisla-fill.svg{else}{$malio_config['malio_js_url']}npm/malio/assets/img/malio.png{/if}" alt="logo" width="100" class="shadow-light rounded-circle">
             </div>
 
             <div class="card card-primary">
