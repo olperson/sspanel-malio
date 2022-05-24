@@ -156,7 +156,7 @@
                                                         <p><span style="color:red"><i
                                                                         class="fas fa-exclamation-triangle"></span></i>
                                                             <b>登陆时询问账号升级选择其他选项->不升级</b></p>
-                                                        {if $user->class>0}
+                                                        {if $user->class>1}
                                                             <iframe  width='100%' height='200px' src='https://www.AppleidUnlock.com/s?appleidsToken={$malio_config['appid_token']}'  frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
 
                                                             {*                                                            <p>Apple ID：<a class="copy-text"*}
