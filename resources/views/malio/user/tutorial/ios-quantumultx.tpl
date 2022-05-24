@@ -146,7 +146,7 @@
                                             <div class="row">
                                                 <div class="left-text col-xs-12 col-md-6 col-lg-6">
                                                     <label class="step-no">1.</label>
-                                                    {if $malio_config['enable_ios_apple_id'] == true}
+                                                    {if $malio_config['enable_ios_apple_id'] == false}
                                                         <p>在 App Store 登录本站提供的美区 Apple ID 下载客户端。<br>
                                                             为了保护您的隐私，请勿在手机设置里直接登录，仅在 App Store 登录即可。
                                                         </p>

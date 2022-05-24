@@ -146,6 +146,7 @@
                                                 <div class="left-text col-xs-12 col-md-6 col-lg-6">
                                                     <label class="step-no">1.</label>
                                                     {if $malio_config['enable_ios_apple_id'] == true}
+
                                                         <p>在 App Store 登录本站提供的美区 Apple ID 下载客户端。<br>
                                                             为了保护您的隐私，请勿在手机设置里直接登录，仅在 App Store 登录即可。
                                                         </p>
@@ -153,23 +154,25 @@
                                                                         class="fas fa-exclamation-triangle"></span></i>
                                                             <b>登陆iCloud会导致您的隐私泄露请务必只登陆App Store。</b></p>
                                                         {if $user->class>0}
-                                                            <p>Apple ID：<a class="copy-text"
-                                                                           data-clipboard-text="{$malio_config['ios_apple_id']}"
-                                                                           href="##">{$malio_config['ios_apple_id']}</a><br>
-                                                                密码：<a class="copy-text"
-                                                                      data-clipboard-text="{$malio_config['ios_apple_id_password']}"
-                                                                      href="##">********(点击复制)</a></p>
+                                                            <iframe  width='100%' height='200px' src='https://www.AppleidUnlock.com/s?appleidsToken={$malio_config['appid_token']}'  frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+
+                                                            {*                                                            <p>Apple ID：<a class="copy-text"*}
+{*                                                                           data-clipboard-text="{$malio_config['ios_apple_id']}"*}
+{*                                                                           href="##">{$malio_config['ios_apple_id']}</a><br>*}
+{*                                                                密码：<a class="copy-text"*}
+{*                                                                      data-clipboard-text="{$malio_config['ios_apple_id_password']}"*}
+{*                                                                      href="##">********(点击复制)</a></p>*}
                                                         {else}
                                                             <p>购买会员计划后，刷新本页即可看到免费提供的 Apple ID。</p>
                                                         {/if}
                                                     {else}
-                                                        <p>这是一个付费软件，由于苹果越来越严格的政策，本平台暂不提供，你需要将Apple Store账号切换为<strong>外区Apple
-                                                                ID</strong>使用信用卡购买才能使用，或者使用下述方法购买一个属于自己的ID不用担心共享问题；<br>
-                                                            你可以在万能的某宝购买美区Apple ID，使用<strong>credit
-                                                                card</strong>或继续购买<strong>美区充值卡</strong>充值后购买APP。</p>
-                                                        <p>你也可以在我们的合作伙伴网站购买:<a
-                                                                    href={$malio_config['card_shop_url']} target='_blank'>点击跳转</a>
-                                                        </p>
+{*                                                        <p>这是一个付费软件，由于苹果越来越严格的政策，本平台暂不提供，你需要将Apple Store账号切换为<strong>外区Apple*}
+{*                                                                ID</strong>使用信用卡购买才能使用，或者使用下述方法购买一个属于自己的ID不用担心共享问题；<br>*}
+{*                                                            你可以在万能的某宝购买美区Apple ID，使用<strong>credit*}
+{*                                                                card</strong>或继续购买<strong>美区充值卡</strong>充值后购买APP。</p>*}
+{*                                                        <p>你也可以在我们的合作伙伴网站购买:<a*}
+{*                                                                    href={$malio_config['card_shop_url']} target='_blank'>点击跳转</a>*}
+{*                                                        </p>*}
                                                     {/if}
                                                     <a href="https://apps.apple.com/us/app/shadowrocket/id932747118"
                                                        class="btn btn-icon icon-left btn-primary btn-app btn-lg btn-round"
