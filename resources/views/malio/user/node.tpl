@@ -115,7 +115,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    {if $config['show_stream_media'] == true}
+                                    {if $config['show_stream_media'] == true && $node['unlock']!=''}
                                         <div style="border-top: 2px dashed #ECF0F3;
                                         border-bottom-right-radius: 0.42rem;
                                         border-bottom-left-radius: 0.42rem;
