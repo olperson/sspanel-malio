@@ -483,13 +483,13 @@ class UserController extends BaseController
 				
 				$unlock = StreamMedia::where('node_id', $node->id)
 					->orderBy('id', 'desc')
-					->where('created_at', '>', time() - 86460) // 只获取最近一天零一分钟内上报的数据
+					->where('created_at', '>', time() - 864600) // 只获取最近一天零一分钟内上报的数据
 					->first();
 				if ($unlock != null) {
 					$details = json_decode($unlock->result, true);
 					
-					$details = str_replace('Originals Only', '仅限自制', $details);
-					$details = str_replace('Oversea Only', '仅限海外', $details);
+					$details = str_replace('Originals Only', '自制', $details);
+					$details = str_replace('Oversea Only', '海外', $details);
 					$array_node['unlock'] = [
 						'node_name' => $node->name,
 						'created_at' => $unlock->created_at,
@@ -509,8 +509,8 @@ class UserController extends BaseController
 						
 						if ($value_node != null) {
 							$details = json_decode($value_node->result, true);
-							$details = str_replace('Originals Only', '仅限自制', $details);
-							$details = str_replace('Oversea Only', '仅限海外', $details);
+							$details = str_replace('Originals Only', '自制', $details);
+							$details = str_replace('Oversea Only', '海外', $details);
 							
 							$array_node['unlock'] = [
 								'node_name' => $key_node->name,
