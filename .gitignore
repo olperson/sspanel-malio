@@ -9,6 +9,7 @@
 /config/.config.php
 /config/.malio_config.php
 /config/18.bak
+/resources/email/customEmail.tpl
 /storage/*.renew
 /storage/*.offline
 /storage/*.ex*
