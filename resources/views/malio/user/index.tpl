@@ -128,7 +128,7 @@
 
         {if $malio_config['index_subinfo_buttons_align'] == true}
         .buttons a {
-            width: 230px;
+            width: 250px;
         }
 
         {/if}
