@@ -15,16 +15,16 @@ exclude-simple-hostnames = true
 ipv6 = true
 replica = false
 {if $surge >= 3}
-    http-listen = 0.0.0.0:8234
-    socks5-listen = 0.0.0.0:8235
-    internet-test-url = http://baidu.com
-    proxy-test-url = http://bing.com
-    test-timeout = 3
+http-listen = 0.0.0.0:8234
+socks5-listen = 0.0.0.0:8235
+internet-test-url = http://baidu.com
+proxy-test-url = http://bing.com
+test-timeout = 3
 {else}
-    interface = 0.0.0.0
-    socks-interface = 0.0.0.0
-    port = 8234
-    socks-port = 8235
+interface = 0.0.0.0
+socks-interface = 0.0.0.0
+port = 8234
+socks-port = 8235
 {/if}
 
 [Replica]
@@ -42,14 +42,14 @@ use-keyword-filter = false
 
 [Rule]
 {if $surge >= 3}
-    RULE-SET,SYSTEM,🍎 Only
-    RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Proxy.list,🍃 Proxy
-    RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Domestic.list,🍂 Domestic
-    RULE-SET,LAN,DIRECT
+RULE-SET,SYSTEM,🍎 Only
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Proxy.list,🍃 Proxy
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Domestic.list,🍂 Domestic
+RULE-SET,LAN,DIRECT
 {else}
-    {include file='rule/Apple.conf'}
-    {include file='rule/PROXY.conf'}
-    {include file='rule/DIRECT.conf'}
+{include file='rule/Apple.conf'}
+{include file='rule/PROXY.conf'}
+{include file='rule/DIRECT.conf'}
 {/if}
 
 GEOIP,CN,🍂 Domestic
@@ -60,15 +60,15 @@ localhost = 127.0.0.1
 syria.sy = 127.0.0.1
 
 {literal}
-    [URL Rewrite]
-    // Google_Service_HTTPS_Jump
-    ^https?:\/\/(www\.)?g\.cn https://www.google.com 302
-    ^https?:\/\/(www\.)?google\.cn https://www.google.com 302
+[URL Rewrite]
+// Google_Service_HTTPS_Jump
+^https?:\/\/(www\.)?g\.cn https://www.google.com 302
+^https?:\/\/(www\.)?google\.cn https://www.google.com 302
 
-    // Wiki
-    ^https?:\/\/.+.(m\.)?wikipedia\.org/wiki http://www.wikiwand.com/en 302
-    ^https?:\/\/zh.(m\.)?wikipedia\.org/(zh-hans|zh-sg|zh-cn|zh(?=/)) http://www.wikiwand.com/zh 302
-    ^https?:\/\/zh.(m\.)?wikipedia\.org/zh-[a-zA-Z]{2,} http://www.wikiwand.com/zh-hant 302
+// Wiki
+^https?:\/\/.+.(m\.)?wikipedia\.org/wiki http://www.wikiwand.com/en 302
+^https?:\/\/zh.(m\.)?wikipedia\.org/(zh-hans|zh-sg|zh-cn|zh(?=/)) http://www.wikiwand.com/zh 302
+^https?:\/\/zh.(m\.)?wikipedia\.org/zh-[a-zA-Z]{2,} http://www.wikiwand.com/zh-hant 302
 {/literal}
 [Header Rewrite]
 ^https?://www.zhihu.com/question/ header-replace User-Agent Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.45 Safari/537.36

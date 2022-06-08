@@ -34,31 +34,31 @@ secret: '{if array_key_exists("secret",$opts)}{$opts['secret']}{else}{/if}'
 # external-ui: folder
 
 {if array_key_exists("dns",$opts) && $opts['dns']==1}
-    dns:
-    enable: true
-    ipv6: false
-    # listen: 0.0.0.0:53
-    # enhanced-mode: redir-host
-    nameserver:
+  dns:
+  enable: true
+  ipv6: false
+  # listen: 0.0.0.0:53
+  # enhanced-mode: redir-host
+  nameserver:
     - 1.2.4.8
     - 223.5.5.5
     - 114.114.114.114
-    fallback:
+  fallback:
     - tls://dns.rubyfish.cn:853
 
-    # Clash DNS 请求逻辑：
-    # (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
-    # (2) clash 将选取 nameserver 列表内，解析最快的结果。
-    # (3) 若解析结果中，IP 地址属于 国外，那么 Clash 将选择 fallback 列表内，解析最快的结果。
+  # Clash DNS 请求逻辑：
+  # (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
+  # (2) clash 将选取 nameserver 列表内，解析最快的结果。
+  # (3) 若解析结果中，IP 地址属于 国外，那么 Clash 将选择 fallback 列表内，解析最快的结果。
 
-    # 注意：
-    # (1) 如果您为了确保 DNS 解析结果无污染，请仅保留列表内以 tls:// 开头的 DNS 服务器，但是通常对于国内没有太大必要。
-    # (2) 如果您不在乎可能解析到污染的结果，更加追求速度。请将 nameserver 列表的服务器插入至 fallback 列表内，并移除重复项。
+  # 注意：
+  # (1) 如果您为了确保 DNS 解析结果无污染，请仅保留列表内以 tls:// 开头的 DNS 服务器，但是通常对于国内没有太大必要。
+  # (2) 如果您不在乎可能解析到污染的结果，更加追求速度。请将 nameserver 列表的服务器插入至 fallback 列表内，并移除重复项。
 {/if}
 
 proxies:
 {foreach $Proxys as $Proxy}
-    - {json_encode($Proxy,320)}
+  - {json_encode($Proxy,320)}
 {/foreach}
 
 proxy-groups:
@@ -66,9 +66,9 @@ proxy-groups:
 
 # 规则
 {if $Profiles == 'ConnersHua_Pro'}
-    {include file='rule/ConnersHua_Pro.yaml'}
+{include file='rule/ConnersHua_Pro.yaml'}
 {elseif $Profiles == 'ConnersHua_BacktoCN'}
-    {include file='rule/ConnersHua_BacktoCN.yaml'}
+{include file='rule/ConnersHua_BacktoCN.yaml'}
 {else}
-    {include file='rule/lhie1_Rule.yaml'}
+{include file='rule/lhie1_Rule.yaml'}
 {/if}
