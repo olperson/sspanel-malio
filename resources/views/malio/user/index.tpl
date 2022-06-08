@@ -19,31 +19,38 @@
             flex-basis: 0;
         }
 
-
+        .btn-clash {
+            background: linear-gradient(to right, #3385b1, rgb(32, 73, 131)) !important;
+            color: white !important;
+            border-color: transparent;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            margin-bottom: 16px;
+        }
         .btn-quantumult {
             background: linear-gradient(to right, black, black) !important;
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.38);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
-        .btn-quantumult {
-            background: linear-gradient(to right, #366ad8, #089eea) !important;
+        .btn-quantumultx {
+            background: linear-gradient(to right, #4286f4, #0d3294) !important;
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.38);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
         .btn-shadowrocket {
-            background: linear-gradient(to right, #1e71d9, #3671b9) !important;
+            background: linear-gradient(to right, #6dd5ed, #2193b0) !important;
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px #3671b99a;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
@@ -52,7 +59,7 @@
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 4px #ff567885;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
@@ -61,16 +68,16 @@
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px #e780a2b0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
         .btn-v2ray {
-            background: linear-gradient(to right, #04edd9, #23a9a7) !important;
+            background: linear-gradient(to right, rgba(117, 135, 160, 0.9), #2c4d4c) !important;
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px #df268f63;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
@@ -79,7 +86,7 @@
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px #3671b99a;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
@@ -88,25 +95,18 @@
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px #8d7cfab2;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
-        .btn-clash {
-            background: linear-gradient(to right, #49BCFC, #3B92F8) !important;
-            color: white !important;
-            border-color: transparent;
-            border: none;
-            box-shadow: 0 2px 6px rgba(73, 189, 252, 0.521);
-            margin-bottom: 16px;
-        }
+
 
         .btn-surfboard {
             background: linear-gradient(to right, #303030, #303030) !important;
             color: white !important;
             border-color: transparent;
             border: none;
-            box-shadow: 0 2px 6px #3030306e;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
             margin-bottom: 16px;
         }
 
@@ -492,12 +492,12 @@
                                             <a href="##"
                                                class="btn btn-icon icon-left btn-primary btn-quantumultx copy-text btn-lg btn-round"
                                                data-clipboard-text="https://dove.589669.xyz/profiles?type=QuanX&sub={$subInfo['quantumultx']}&emoji=0&sort=0"><i
-                                                        class="malio-quantumult"></i> {$i18n->get('import-quantumultx-config')}
+                                                        class="malio-quantumultx"></i> {$i18n->get('import-quantumultx-config')}
                                             </a>
                                             <a href="##"
                                                class="btn btn-icon icon-left btn-primary btn-quantumultx copy-text btn-lg btn-round"
                                                data-clipboard-text="{$subInfo['quantumultx']}&emoji=0&sort=0"><i
-                                                        class="malio-quantumult"></i> {$i18n->get('import-quantumultx-url')}
+                                                        class="malio-quantumultx"></i> {$i18n->get('import-quantumultx-url')}
                                             </a>
                                             {if (in_array("v2ray",$malio_config['support_sub_type']))}
                                                 {if (!in_array("v2ray",$malio_config['index_hidden_import_buttons']))}

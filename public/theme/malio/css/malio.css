@@ -68,6 +68,9 @@
   .malio-quantumult:before {
     content: "\e901";
   }
+.malio-quantumultx:before {
+  content: "\e915";
+}
   .malio-surfboard:before {
     content: "\e902";
   }
