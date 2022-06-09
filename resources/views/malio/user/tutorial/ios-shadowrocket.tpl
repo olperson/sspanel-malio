@@ -129,7 +129,7 @@
                                 </button>
                                 <div class="dropdown-menu dropleft">
                                     <a class="dropdown-item has-icon" href="/user/tutorial?os=ios&client=quantumultx"><i
-                                                class="malio-atom"></i>QuantumultX</a>
+                                                class="malio-quantumultx"></i>QuantumultX</a>
                                 </div>
                             </div>
                         </div>
