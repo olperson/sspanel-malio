@@ -32,7 +32,7 @@ class NodeController extends AdminController
 		$nodes = Node::all();
 		$offline_nodes = [];
 		foreach ($nodes as $node) {
-			$node_name = explode('-', $node['name']);
+			$node_name = explode('|', $node['name']);
 			$node['name'] = $node_name[0];
 			$node_heartbeat = $node->node_heartbeat + 300;
 			$node['online'] = -1;
