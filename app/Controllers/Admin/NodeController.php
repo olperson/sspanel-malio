@@ -39,7 +39,7 @@ class NodeController extends AdminController
 			if ($node_heartbeat > time()) {
 				$node['online'] = 1;
 			}
-			if ($node['online'] == 0 && $node['type'] != 0 && $node['sort'] != 9) {
+			if ($node['online'] == -1 && $node['type'] != 0 && $node['sort'] != 9) {
 				$offline_nodes[] = $node;
 			}
 		}
