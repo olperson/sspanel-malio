@@ -13,6 +13,12 @@
                 <div class="card">
                     <div class="card-main">
                         <div class="card-inner">
+                            离线节点：
+                            <p>
+                            {foreach $offline_nodes as $offline_node}
+                                {$offline_node['name']}<br>
+                                {/foreach}
+                            </p>
                             <p>系统中所有节点的列表。</p>
                             <p>显示表项:
                                 {include file='table/checkbox.tpl'}

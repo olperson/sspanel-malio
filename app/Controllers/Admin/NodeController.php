@@ -29,14 +29,30 @@ class NodeController extends AdminController
 			'mu_only' => '只启用单端口多用户');
 		$table_config['default_show_column'] = array('op', 'id', 'name', 'sort');
 		$table_config['ajax_url'] = 'node/ajax';
-		
-		return $this->view()->assign('table_config', $table_config)->display('admin/node/index.tpl');
+		$nodes = Node::all();
+		$offline_nodes = [];
+		foreach ($nodes as $node) {
+			$node_name = explode('-', $node['name']);
+			$node['name'] = $node_name[0];
+			$node_heartbeat = $node->node_heartbeat + 300;
+			$node['online'] = -1;
+			if ($node_heartbeat > time()) {
+				$node['online'] = 1;
+			}
+			if ($node['online'] == 0 && $node['type'] != 0 && $node['sort'] != 9) {
+				$offline_nodes[] = $node;
+			}
+		}
+		return $this->view()
+			->assign('offline_nodes', $offline_nodes)
+			->assign('table_config', $table_config)
+			->display('admin/node/index.tpl');
 	}
 	
 	public function create($request, $response, $args)
 	{
-		$node=Node::orderby('id','desc')->first();
-		return $this->view()->assign('node',$node)
+		$node = Node::orderby('id', 'desc')->first();
+		return $this->view()->assign('node', $node)
 			->display('admin/node/create.tpl');
 	}
 	
@@ -64,7 +80,7 @@ class NodeController extends AdminController
 		
 		if (in_array($node->sort, array(0, 1, 10, 11, 12, 13))) {
 			$server_list = explode(';', $node->server);
-			if (!Tools::is_ip($server_list[0]) || $node->sort==11) {
+			if (!Tools::is_ip($server_list[0]) || $node->sort == 11) {
 				$node->node_ip = gethostbyname($server_list[0]);
 				if ($node->node_ip == "127.0.0.1") {
 					$node->node_ip = DNSoverHTTPS::gethostbyName($server_list[0]);
@@ -149,7 +165,7 @@ class NodeController extends AdminController
 		$success = true;
 		if (in_array($node->sort, array(0, 1, 10, 11, 12, 13))) {
 			$server_list = explode(';', $node->server);
-			if (!Tools::is_ip($server_list[0]) || $node->sort==11) {
+			if (!Tools::is_ip($server_list[0]) || $node->sort == 11) {
 				$success = $node->changeNodeIp($server_list[0]);
 			} else {
 				$success = $node->changeNodeIp($req_node_ip);
