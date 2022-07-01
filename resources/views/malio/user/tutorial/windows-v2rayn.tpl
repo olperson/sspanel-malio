@@ -146,7 +146,7 @@
                                                     <p>下载V2ray客户端 </p>
                                                     <p>2.在菜单中点击复制订阅地址，稍后添加节点时需要用到<br>
                                                         新建文件夹并解压到桌面<br>
-                                                        运行时请右键，以管理员身份运行
+                                                        运行时请右键，以管理员身份运行"V2rayN.exe"
                                                     </p>
                                                     <a href="{$malio_config['download_v2rayn']}"
                                                        class="btn btn-icon icon-left btn-primary btn-app btn-lg btn-round"
@@ -155,8 +155,8 @@
                                                 <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                                                     <div class="tutorial-pic hide-on-mobie">
                                                         <img style="border:1px solid #f0f0f0"
-                                                             src="{if {$malio_config['malio_js_url']} == ''}/theme/malio{else}{$malio_config['malio_js_url']}npm/malio{/if}/img/tutorial/windows-cfw-1.png">
-                                                    </div>
+                                                             src="https://s2.loli.net/2022/07/01/gH7E3uxrnktFvhf.png">
+                                                        </div>
                                                 </div>
                                             </div>
                                         </li>
@@ -178,7 +178,7 @@
                                                 </div>
                                                 <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                                                     <div class="tutorial-pic">
-                                                        <img src="https://i.loli.net/2019/11/22/XcTvHR2z6oZUx3O.png">
+                                                        <img src="https://s2.loli.net/2022/07/01/6RfTcpNAy42SgJM.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -188,13 +188,13 @@
                                             <div class="row">
                                                 <div class="left-text col-xs-12 col-md-6 col-lg-6">
                                                     <label class="step-no">3.</label>
-                                                    <p>配置好节点后需要设置系统代理才能让浏览器访问外网，操作为：右下角托盘找到v2rayN图标，在图标上点击右键，找到“系统代理”
-                                                        ，点击“自动配置系统代理”，此时图标会变成红色：</p>
+                                                    <p>1.点击主界面订阅按钮“更新订阅(不通过代理)“</p>
+                                                    <p>2.点击主界面任意节点回车启用</p>
                                                 </div>
                                                 <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                                                     <div class="tutorial-pic">
                                                         <img style="border:1px solid #f0f0f0"
-                                                             src="https://s2.loli.net/2022/01/12/XRa1qfMETpLl3bz.jpg">
+                                                             src="https://s2.loli.net/2022/07/01/ZAtc7syb9ROLhxE.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -204,15 +204,29 @@
                                             <div class="row">
                                                 <div class="left-text col-xs-12 col-md-6 col-lg-6">
                                                     <label class="step-no">4.</label>
-                                                    <p>默认v2rayN是全局代理，也就是不管访问什么网站，都是走节点流量，主界面点击“设置” -> “路由设置” -> “基础功能”
-                                                        -> “一键导入基础规则”，然后点击“确定”。<br>
-                                                        如果基础功能为灰色不可点击则可右键任务栏图标->“路由”->“绕过大陆”<br>
-                                                        接下来访问百度、淘宝等国外网内都是直连，不会再走代理了</p>
+                                                    <p>配置好节点后需要设置系统代理才能让浏览器访问外网，操作为：右下角托盘找到v2rayN图标，在图标上点击右键，找到“系统代理”
+                                                        ，点击“自动配置系统代理”，此时图标会变成红色：现在您已可以正常访问</p>
                                                 </div>
                                                 <div class="right-pic col-xs-12 col-md-6 col-lg-6">
                                                     <div class="tutorial-pic">
                                                         <img style="border:1px solid #f0f0f0"
-                                                             src="https://s2.loli.net/2022/01/12/Ny5BARLdMS2Kvcq.jpg">
+                                                             src="https://s2.loli.net/2022/07/01/6yX8rkFglRcGxjK.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="left-text col-xs-12 col-md-6 col-lg-6">
+                                                    <label class="step-no">进阶</label>
+                                                    <p>新版软件已配置好分流即按照上述步骤配置后再来访问百度、淘宝等国外网内都是直连，不会再走代理了<br>
+                                                        您可以在路由规则中选择想要的分流方式</p>
+                                                </div>
+                                                <div class="right-pic col-xs-12 col-md-6 col-lg-6">
+                                                    <div class="tutorial-pic">
+                                                        <img style="border:1px solid #f0f0f0"
+                                                             src="https://s2.loli.net/2022/07/01/AbIhxeXJuzW9f1s.png">
                                                     </div>
                                                 </div>
                                             </div>
