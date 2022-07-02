@@ -111,11 +111,7 @@
         <div class="tab-pane fade active show" id="trojan" role="tabpanel" aria-labelledby="trojan-tab">
           <div class="row mt-2">
             <div class="col-12 col-sm-3 col-md-3">
-              <ul class="nav nav-pills flex-column" id="myTab4" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="trojan-info-tab" data-toggle="tab" href="#trojan-info" role="tab" aria-controls="trojan-info" aria-selected="true">信息</a>
-                </li>
-              </ul>
+
             </div>
             <div class="col-12 col-sm-9 col-md-9">
               <div class="tab-content no-padding" id="myTab2Content">
@@ -128,6 +124,8 @@
                       <p>HOST&PEER：<code class="card-tag tag-green">{$sort14Node['host']}</code></p>
                   {/if}
                 </div>
+                <div class="mb-2">Trojan链接:
+                  <code>{URL::getTrojanUrl($user, $node)}</code></div>
               </div>
             </div>
           </div>

@@ -726,7 +726,23 @@ class URL
         $return_array['ratio'] = $node->traffic_rate;
         return $return_array;
     }
-
+	
+	/**
+	 * 获取 Trojan URL
+	 *
+	 * @param User $user 用户
+	 */
+	public static function getTrojanUrl($user, $node)
+	{
+		$server = self::getTrojanItem($user,$node);
+		$return = 'trojan://' . $server['passwd']
+			. '@' . $server['address'] . ':' . $server['port'];
+		if ($server['host'] !== $server['address']) {
+			$return .= '?peer=' . $server['host'] . '&sni=' . $server['host'];
+		}
+		return $return . '#' . rawurlencode($node->name);
+	}
+	
     public static function getV2Url($user, $node, $arrout = 0, $emoji = false)
     {
         $item = Tools::v2Array($node->server);
