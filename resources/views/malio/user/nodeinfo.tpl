@@ -96,7 +96,7 @@
               {continue}
           {/if}
           <li class="nav-item">
-            <a class="nav-link {if $node->mu_only == 1 and $first_mu_node_one == ture}active{/if}" id="ssr-{$single_muport['server']->server}-tab" data-toggle="tab" href="#ssr-{$single_muport['server']->server}" role="tab" aria-controls="ss-{$single_muport['server']->server}" aria-selected="{if $node->mu_only == 1 and $first_mu_node_one == ture}ture{$first_mu_node_one = false}{else}false{/if}">ShadowsocksR ({$single_muport['server']->server}单端口)</a>
+            <a class="nav-link {if $node->mu_only == 1 and $first_mu_node_one == ture}active{/if}" id="ssr-{$single_muport['server']->server}-tab" data-toggle="tab" href="#ssr-{$single_muport['server']->server}" role="tab" aria-controls="ss-{$single_muport['server']->server}" aria-selected="{if $node->mu_only == 1 and $first_mu_node_one == ture}ture{$first_mu_node_one = false}{else}false{/if}">Shadowsocks(R) ({$single_muport['server']->server}单端口)</a>
           </li>
         {/foreach}
         {/if}
