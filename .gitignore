@@ -1,0 +1,71 @@
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+/.idea/
+/.well-known/acme-challenge/
+/config/.config.php
+/config/.malio_config.php
+/config/18.bak
+/resources/email/customEmail.tpl
+/storage/*.renew
+/storage/*.offline
+/storage/*.ex*
+/storage/paytaro.log
+/storage/qqwry.dat
+/storage/framework/smarty/compile/*.php
+/vendor/
+/.user.ini
+/404.html
+/delchache.sh
+/storage/qqwry.dat.bak
+/.htaccess
+/cron.sh
+/csm.sh
+/index.html
+/job.log
+/job.sh
+/mail.log
+/nginx.htaccess
+/README-sspanel.md
+/sendmail.sh
+/xcat1
+/error/400.html
+/error/403.html
+/error/404.html
+/error/500.html
+/error/501.html
+/error/502.html
+/error/503.html
+/error/504.html
+/error/505.html
+/error/506.html
+/error/507.html
+/error/509.html
+/error/510.html
+/public/.well-known/acme-challenge/-PobUK0tI-pg_EHk2E6hf48kv2crapOWa1fZwRki0RI
+/public/client-download/clash-android.apk
+/public/client-download/Clash-Windows.7z
+/public/client-download/ClashX.dmg
+/error/index.html
+/public/client-download/netch-windows.zip
+/public/client-download/potatso-lite.ipa
+/public/client-download/potatso-lite.plist
+/public/client-download/README.md
+/public/client-download/ss-android.apk
+/public/client-download/ss-android-obfs.apk
+/public/client-download/ss-mac.zip
+/public/client-download/ss-win.zip
+/public/client-download/ssd-android.apk
+/public/client-download/ssd-win.7z
+/public/client-download/ssr-android.apk
+/public/client-download/ssr-linux.AppImage
+/public/client-download/ssr-mac.dmg
+/public/client-download/ssr-win.7z
+/public/client-download/ssrr-android.apk
+/public/client-download/SSTap.7z
+/public/client-download/v2rayn.zip
+/public/client-download/v2rayng.apk
+/public/client-download/V2rayU.dmg
