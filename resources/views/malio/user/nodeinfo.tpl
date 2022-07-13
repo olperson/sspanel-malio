@@ -336,7 +336,7 @@
                 <div class="col-12 col-sm-9 col-md-9">
                   <div class="tab-content no-padding" id="myTab2Content">
                     <div class="tab-pane fade active show" id="ssr-{$single_muport['server']->server}-info" role="tabpanel" aria-labelledby="ssr-{$single_muport['server']->server}-info-tab">
-                      {$ssr_item_mu_only = URL::getItem($user, $node, {$single_muport['server']->server}, $relay_rule_id, 0)}
+                      {$ssr_item_mu_only = URL::getItem($user, $node, {$single_muport['server']->server}, $relay_rule_id, $is_ss)}
                       {if $ssr_item_mu_only['obfs']=="v2ray"}
                       <p>您好，Shadowsocks V2Ray-Plugin 节点需要您的加密方式使用 AEAD 系列。请您到 资料编辑
                         页面修改后再来查看此处。</p>
