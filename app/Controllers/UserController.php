@@ -112,6 +112,7 @@ class UserController extends BaseController
 		} else {
 			$reset_time = 'Na';
 		}
+		/** @noinspection PhpVoidFunctionResultUsedInspection */
 		return $this->view()
 			->assign('reset_time', $reset_time)
 			->assign('class_left_days', $class_left_days)
@@ -739,9 +740,16 @@ class UserController extends BaseController
 								$mu_user->obfs_param = $this->user->getMuMd5();
 								$nodes_muport[] = array('server' => $node_mu, 'user' => $mu_user);
 							}
+							// 如果混淆和协议均为SS原生且为单端口的，即判断为AEAD单端口类型
+							if ($mu_user->obfs == "plain" && $mu_user->protocol == "origin") {
+								$is_ss=1;
+							}else{
+								$is_ss=0;
+							}
 						}
 					}
 					return $this->view()
+						->assign('is_ss',$is_ss)
 						->assign('nodes_muport', $nodes_muport)
 						->assign('node', $node)
 						->assign('user', $user)
