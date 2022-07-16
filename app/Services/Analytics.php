@@ -44,7 +44,8 @@ class Analytics
 
     public function getLastTrafficUsage()
     {
-        $total = User::sum('last_day_t');
+        $total = Node::sum('node_bandwidth');
+//	    $total = User::sum('last_day_t');
         return Tools::flowAutoShow($total);
     }
 
